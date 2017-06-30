@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="WebRTC code samples">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta itemprop="description" content="Client-side WebRTC code samples">
+  <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
+  <meta itemprop="name" content="WebRTC code samples">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#ffffff">
+
+  <base target="_blank">
+
+  <title>MediaStream Recording</title>
+
+  <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+ 
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+<!--<?php
+require_once($_SERVER['DOCUMENT_ROOT'] . '/wp-includes/pluggable.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/wp-load.php');
+$user = wp_get_current_user();
+if($user->ID == 0) {echo "Nicht angemeldet - bitte melde dich an um ein Video hochzuladen!"; exit;}
+
+?>
+-->
+<div id="login" style="display: none;">
+    Melde dich bitte an!</br>
+    <input type="text" id="user" name="user" placeholder="User" /></br>
+    <input type="password" id="pass" name="pass" placeholder="Password" /></br>
+    <input type="button" value="Anmelden" onClick="login()"/></br>
+    <input type="button" value="Abbrechen" onClick="closet()"/>
+</div>
+
+<div id="loader" style="display: none;">
+    <img src="loader.gif">
+</div>
+
+<div id="modul-container">
+
+<div id="container-app" class="modul">
+    <div class="headline">Mit 22 Sekunden APP</div>
+    <div class="content">In K&uuml;rze auf Google Play und im App Store erh&auml;ltlich</div>
+
+
+</div>
+
+<div id="container" class="modul">
+    <div class="headline">Jetzt aufnehmen</div>
+    <div class="content">
+	<video id="gum" autoplay muted></video>
+	<div id="counter"><span id="seconds">22</span> Sekunden &uuml;brig</div>
+	<video id="recorded" autoplay loop></video>
+	<div style="text-align: center;">
+    	    <button id="record" disabled>Starte deine 22 Sekunden</button>
+    	    <button id="play" disabled>Abspielen</button>
+    	    <button id="download" disabled>Hochladen</button>
+	</div>
+    </div>
+</div>
+
+<div id="container-howto" class="modul">
+    <div class="headline">Wie funktioniert's?</div>
+    <div class="content">
+	<ol>
+	    <li>Bereite dich vor! Bist du auf der Vorschau gut zu erkennen? Passt der Hintergrund bzw. das Licht?</li>
+	    <li>Dr&uuml;cke auf den Knopf "Starte deine 22 Sekunden"</li>
+	    <li>Erz&auml;hle uns wer du bist und was dein zuk&uuml;nftiger Traumpartner mitbringen sollte.</li>
+	    <li>Dr&uuml;cke auf "Stop" oder warte bis die 22 Sekunden abgelaufen sind.</li>
+	    <li>Du kannst dein Video mit "Abspielen" noch einmal ansehen - passt auch der Ton?</li>	
+	    <li>Klicke auf "Hochladen" wenn du zufrieden bist.</li>
+	    <li>Herzlichen Gl&uuml;ckwunsch! Wir checken dein Video kurz und dann ist es auch schon auf deinem Profil!</li>
+    </ol>
+    </div>
+
+</div>
+
+
+</div>
+
+  <!-- include adapter for srcObject shim -->
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/ga.js"></script>
+
+</body>
+</html>
